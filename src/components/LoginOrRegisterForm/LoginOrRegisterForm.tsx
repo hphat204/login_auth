@@ -22,13 +22,16 @@ export default function LoginForm() {
     if (user.password.length < 8) return setErrorMsg("atleast 8 characters required for password");
     if (!user.email || !user.password) return;
     try {
-      const result = await fetch(`http://localhost:3500/${register ? "register" : "login"}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const result = await fetch(
+        `https://auth-login-backend.onrender.com/${register ? "register" : "login"}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
       const data = await result.json();
       if (result && result.ok) {
         setUser({
