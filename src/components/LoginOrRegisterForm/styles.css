@@ -1,0 +1,55 @@
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px solid black;
+  width: 100%;
+}
+.inputBox {
+  padding: 10px;
+  margin: 2px 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+.inputLabel {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: var(--text-color);
+}
+.btn {
+  padding: 10px 0;
+  background-color: var(--button-color);
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.showPasswordContainer {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--button-color);
+}
+
+.registerLink {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+}
+
+.registerLink:hover {
+  opacity: 0.7;
+}
