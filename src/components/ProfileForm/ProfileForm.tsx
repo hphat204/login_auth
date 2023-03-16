@@ -19,7 +19,7 @@ export default function ProfileForm() {
   };
   useEffect(() => {
     const getUserProfile = async () => {
-      const res = await fetch(`https://auth-login-backend.onrender.com/${userId}`, {
+      const res = await fetch(`https://auth-login-backend.onrender.com/profile/${userId}`, {
         method: "GET",
       });
       if (!res.ok) return;
@@ -42,7 +42,7 @@ export default function ProfileForm() {
     if (!profile.email.includes("@")) return setErrorMsg("email missing @");
     if (profile.phone.length !== 10) return setErrorMsg(" 10 number required");
     try {
-      const result = await fetch(`https://auth-login-backend.onrender.com/${userId}`, {
+      const result = await fetch(`https://auth-login-backend.onrender.com/profile/${userId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
