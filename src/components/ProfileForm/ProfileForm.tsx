@@ -5,7 +5,6 @@ export default function ProfileForm() {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const navigate = useNavigate();
-  console.log(userId);
   const [profile, setProfile] = useState({
     fullName: "",
     dayOfBirth: "",
