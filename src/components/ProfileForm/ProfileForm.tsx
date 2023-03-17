@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "../LoginOrRegisterForm/styles.css";
 export default function ProfileForm() {
   const { userId } = useParams();
   const [errorMsg, setErrorMsg] = useState("");
